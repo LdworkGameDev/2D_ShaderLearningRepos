@@ -31,7 +31,7 @@ Material:
     m_Floats:
     - Vector1_31AACE0A: 10
     - _WindBlowArea: 3
-    - _WindBlowSpeed: 0.3
+    - _WindBlowSpeed: 0
     m_Colors:
     - _Color1: {r: 1, g: 1, b: 1, a: 1}
     - _Color2: {r: 1, g: 1, b: 1, a: 1}

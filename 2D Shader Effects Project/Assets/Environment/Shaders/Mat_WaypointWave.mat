@@ -27,5 +27,5 @@ Material:
     m_Floats: []
     m_Colors:
     - _Color: {r: 1.333333, g: 3.858824, b: 1.427451, a: 0.22352941}
-    - _Offset: {r: 0, g: 0.4, b: 0, a: 0}
+    - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Tiling: {r: 1, g: 1, b: 0, a: 0}
