@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_Dissolve
-  m_Shader: {fileID: -6465566751694194690, guid: 52c3ff19975354c4f86a50da9fa2bdb1,
+  m_Name: Mat_Glowing
+  m_Shader: {fileID: -6465566751694194690, guid: ec4c5b449282ead43ba8aa151678d582,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
@@ -25,8 +25,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Density: 10
-    - _DissolveArea: 0.05
-    - _DissolveValue: 0.57
+    - _OutlineValue: 0
     m_Colors:
-    - _DissolveColor: {r: 3.372549, g: 2.4313726, b: 0.3137255, a: 0}
+    - _OutlineColor: {r: 11.6705885, g: 11.984314, b: 0, a: 1}
