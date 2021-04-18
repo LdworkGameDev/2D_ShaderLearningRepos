@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_Glowing
+  m_Name: Mat_OutlineGlowing
   m_Shader: {fileID: -6465566751694194690, guid: ec4c5b449282ead43ba8aa151678d582,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
@@ -25,6 +25,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _GlowingSpeed: 2
     - _OutlineValue: 0
     m_Colors:
     - Vector4_36641B7C: {r: 1.06, g: 0.76, b: -0.54, a: 0.99}
