@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Mat_FoliageController : MonoBehaviour
 {
-    public Material mat_Foliage;
-
     public float timeToAdd;
     public Gradient color1;
     public Gradient color2;
@@ -18,7 +16,6 @@ public class Mat_FoliageController : MonoBehaviour
 
     private void Start()
     {
-        GetComponent<SpriteRenderer>().material = mat_Foliage;
         material = GetComponent<SpriteRenderer>().material;
 
         if(material != null)
