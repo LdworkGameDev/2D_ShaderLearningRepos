@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_WindBlow
+  m_Name: Mat_WindBlow1
   m_Shader: {fileID: -6465566751694194690, guid: e34d8a9f3525f1246b00c19fc7deadd6,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA

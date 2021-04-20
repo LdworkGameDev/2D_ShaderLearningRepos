@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_OutlineGlowing
-  m_Shader: {fileID: -6465566751694194690, guid: ec4c5b449282ead43ba8aa151678d582,
+  m_Name: Mat_WindBlow2
+  m_Shader: {fileID: -6465566751694194690, guid: d9953775966f5424b81035918f963c89,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
@@ -25,8 +25,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _GlowingSpeed: 2
-    - _OutlineValue: 0
-    m_Colors:
-    - Vector4_36641B7C: {r: 1.06, g: 0.76, b: -0.54, a: 0.99}
-    - _OutlineColor: {r: 11.6705885, g: 11.984314, b: 0, a: 1}
+    - _WindSpeed: 1
+    - _WindingValue: 0.2
+    m_Colors: []
