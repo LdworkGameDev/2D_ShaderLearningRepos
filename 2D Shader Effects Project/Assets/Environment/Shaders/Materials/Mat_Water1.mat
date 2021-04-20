@@ -46,7 +46,7 @@ Material:
     - _Noise1_Strength: 1.51
     - _Noise2_Scale: 138
     - _Noise2_Strength: 1.8
-    - _NormalMap_Strength: 0.89
+    - _NormalMap_Strength: 1
     - _Wave2_Strength: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
@@ -58,7 +58,7 @@ Material:
     - _NormalMap_Direction: {r: 0.01, g: 0, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _Wave1DirectionAndStrength: {r: 0, g: 0.01, b: 0, a: 0}
-    - _Wave1_UpAndDown: {r: 0, g: 0.05, b: 0, a: 0}
+    - _Wave1_UpAndDown: {r: 0, g: 0.01, b: 0, a: 0}
     - _Wave2DirectionAndStrength: {r: 0.001, g: -0.01, b: 0, a: 0}
     - _Wave2_Surface: {r: 0.01, g: -0.04, b: 0, a: 0}
     - _WaveDirectionAndStrength: {r: 0, g: 0.05, b: 0, a: 0}
