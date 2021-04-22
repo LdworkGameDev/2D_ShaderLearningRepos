@@ -4,26 +4,20 @@ using UnityEngine;
 
 public class Mat_FoliageController : MonoBehaviour
 {
-    public float timeToAdd;
+    public Material mat_ChangeColor;
+    public Material mat_SnowCover;
+
+    [Range(0f, 0.05f)] public float changeColorTime;
+    [Range(0f, 0.05f)] public float snowCoverTime;
     public Gradient color1;
     public Gradient color2;
 
-    public Vector3 windBlowDirection;
-    public float windBlowArea;
-    public float windBlowSpeed;
-
-    private Material material;
+    private Material currentMat;
 
     private void Start()
     {
-        material = GetComponent<SpriteRenderer>().material;
-
-        if(material != null)
-        {
-            material.SetFloat("_WindBlowArea", windBlowArea);
-            material.SetVector("_WindBlowDirection", windBlowDirection);
-            material.SetFloat("_WindBlowSpeed", windBlowSpeed);
-        }
+        GetComponent<SpriteRenderer>().material = mat_ChangeColor;
+        currentMat = GetComponent<SpriteRenderer>().material;
     }
 
     private void Update()
@@ -39,12 +33,24 @@ public class Mat_FoliageController : MonoBehaviour
             StopAllCoroutines();
             StartCoroutine(ChangeColor(1f, 0f));
         }
+
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            StopAllCoroutines();
+            StartCoroutine(SnowCoverIn());
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            StopAllCoroutines();
+            StartCoroutine(SnowCoverOut());
+        }
     }
 
     private IEnumerator ChangeColor(float start, float end)
     {
-        if (material == null) yield break;
-
+        GetComponent<SpriteRenderer>().material = mat_ChangeColor;
+        currentMat = GetComponent<SpriteRenderer>().material;
         float timeCounter;
 
         if(start < end)
@@ -52,29 +58,56 @@ public class Mat_FoliageController : MonoBehaviour
             timeCounter = start;
             while (timeCounter < end)
             {
-                material.SetColor("_Color1", color1.Evaluate(timeCounter));
-                material.SetColor("_Color2", color2.Evaluate(timeCounter));
-                timeCounter += timeToAdd;
+                currentMat.SetColor("_Color1", color1.Evaluate(timeCounter));
+                currentMat.SetColor("_Color2", color2.Evaluate(timeCounter));
+                timeCounter += changeColorTime;
                 yield return null;
             }
 
-            material.SetColor("_Color1", color1.Evaluate(end));
-            material.SetColor("_Color2", color2.Evaluate(end));
+            currentMat.SetColor("_Color1", color1.Evaluate(end));
+            currentMat.SetColor("_Color2", color2.Evaluate(end));
         }
         else
         {
             timeCounter = start;
             while (timeCounter > end)
             {
-                material.SetColor("_Color1", color1.Evaluate(timeCounter));
-                material.SetColor("_Color2", color2.Evaluate(timeCounter));
-                timeCounter -= timeToAdd;
+                currentMat.SetColor("_Color1", color1.Evaluate(timeCounter));
+                currentMat.SetColor("_Color2", color2.Evaluate(timeCounter));
+                timeCounter -= changeColorTime;
                 yield return null;
             }
 
-            material.SetColor("_Color1", color1.Evaluate(end));
-            material.SetColor("_Color2", color2.Evaluate(end));
+            currentMat.SetColor("_Color1", color1.Evaluate(end));
+            currentMat.SetColor("_Color2", color2.Evaluate(end));
         }
     }
     
+    private IEnumerator SnowCoverIn()
+    {
+        GetComponent<SpriteRenderer>().material = mat_SnowCover;
+        currentMat = GetComponent<SpriteRenderer>().material;
+
+        float snowCoverAmount = 0.8f;
+        while(snowCoverAmount >= 0.3f)
+        {
+            currentMat.SetFloat("_SnowAmount", snowCoverAmount);
+            snowCoverAmount -= snowCoverTime;
+            yield return null;
+        }
+    }
+
+    private IEnumerator SnowCoverOut()
+    {
+        GetComponent<SpriteRenderer>().material = mat_SnowCover;
+        currentMat = GetComponent<SpriteRenderer>().material;
+
+        float snowCoverAmount = 0.3f;
+        while (snowCoverAmount <= 0.8f)
+        {
+            currentMat.SetFloat("_SnowAmount", snowCoverAmount);
+            snowCoverAmount += snowCoverTime;
+            yield return null;
+        }
+    }
 }

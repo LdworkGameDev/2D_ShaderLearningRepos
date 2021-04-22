@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_SnowCover
-  m_Shader: {fileID: -6465566751694194690, guid: 2a32a9e86efb60c429884016a2b5b40f,
+  m_Name: Mat_HackingMask
+  m_Shader: {fileID: -6465566751694194690, guid: e3947605607db05419816c475a85aeb6,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
@@ -25,7 +25,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 78b401b91f6ff134b852d67f1b5d9bbe, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -36,17 +36,15 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _RandomCharsTex:
+        m_Texture: {fileID: 2800000, guid: 3c694811549b8c34687a534e379a4404, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _CharsSpeed: 0.1
     - _EnableExternalAlpha: 0
-    - _NoiseScale: 10
-    - _SnowAmount: 0.74
-    - _SnowOutlineThickNess: 0.12
-    - _WindBlowNoiseScale: 0.87
-    - _WindBlowSpeed: 0.6
     m_Colors:
+    - _CharsDirection: {r: 0, g: 1, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _OutlineColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 0.83137256}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SnowColor: {r: 0.8490566, g: 0.8370417, b: 0.8370417, a: 1}
-    - _WindBlowDirection: {r: 1, g: 1, b: 0, a: 0}

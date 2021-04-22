@@ -40,10 +40,10 @@ Material:
     - _NoiseStrength: 0.2
     - _Speed: 0.005
     - _WindBlowArea: 0.87
-    - _WindBlowSpeed: 0.1
+    - _WindBlowSpeed: 0.6
     m_Colors:
     - _Color: {r: 5.451938, g: 5.451938, b: 5.451938, a: 0.4980392}
-    - _Color1: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 0.990566, g: 0.990566, b: 0.990566, a: 1}
     - _Color2: {r: 1, g: 1, b: 1, a: 1}
     - _Direction: {r: 0, g: 1, b: 0, a: 0}
     - _HologramTiling: {r: 1, g: 0.13, b: 0, a: 0}
